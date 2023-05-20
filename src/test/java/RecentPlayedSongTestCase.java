@@ -23,9 +23,8 @@ class RecentPlayedSongTestCase {
 		String userName = scanner.next();
 
 		System.out.println("Please enter the number of Songs you want to add: ");
-		// takes an integer input
+		// takes an String input
 		String[] numberOfSongs = new String[scanner.nextInt()];
-		// consuming the <enter> from input above
 		scanner.nextLine();
 		for (int i = 0; i < numberOfSongs.length; i++) {
 			System.out.println("Please enter Songs ");
