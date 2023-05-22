@@ -1,7 +1,13 @@
+package testcase;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 import java.util.*;
+
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import testvagarant.RecentlyPlayedStore;
@@ -9,7 +15,7 @@ import testvagarant.RecentlyPlayedStore;
 class RecentPlayedSongTestCase {
 
 	@Test
-	public void playListSongs() {
+	public void recentPlayedListSongs() {
 		Object expectedRecentPlayedSong = null;
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
@@ -38,6 +44,7 @@ class RecentPlayedSongTestCase {
 		System.out.println("Recently played songs for " + userName + " User is: "
 				+ recentPlayedStore.getRecentlyPlayedSongs(userName));
 
+		// Recent played songs
 		List<String> actualRecentPlayedSong = recentPlayedStore.getRecentlyPlayedSongs(userName);
 		assertEquals(expectedRecentPlayedSong, actualRecentPlayedSong);
 	}
